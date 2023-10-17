@@ -2,8 +2,14 @@
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("Test Hubs") 
 local per = game.Players.LocalPlayer.Name 
-  DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub | 5 Game Support: VietNamPiece, CondDL Piece, Sakura Stand, LuckyBlock Battleground, AUT:OLD UNIVERSE","Ok")  
+  DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub","Ok")  
   local serv = win:Server("Universal", "rbxassetid://4483345998")  
+local tgls = serv:Channel("Game Test Hub Support")  
+ tgls:Label("Viet Nam Piece")
+tgls:Label("ConDL Piece")
+tgls:Label("AUT:OLD UNIVERSE Piece")
+tgls:Label("Sakura Stand")
+tgls:Label("LuckyBlock Battleground")
   local tgls = serv:Channel("Main")  
  tgls:Toggle("Grabtools",false, function(I) 
  getgenv().autograb = I 
