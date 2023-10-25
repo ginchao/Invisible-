@@ -211,7 +211,7 @@ btns:Label("LuckyBlock Battleground")
  drop:Add(v.Name) 
  end 
  end) 
- tgls:Button("Teleport To Player, Need LoadMap", function()  
+ tgls:Button("Teleport To Player", function()  
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok") 
  elseif plr ~= nil then 
