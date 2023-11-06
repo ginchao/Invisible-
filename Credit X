@@ -228,6 +228,7 @@ end)
 drops:Toggle("Toggle Remote Event", false, function(v)
 getgenv().rm = v
 while rm do 
+pcall(function()
 for i, v in pairs(game:GetDescendants()) do
 if v:IsA("RemoteEvent") then
 v:FireServer(id)
@@ -240,6 +241,7 @@ end
 end
 end
 end
+end)
 end
 end)
  local tgls = serv:Channel("Player")  
