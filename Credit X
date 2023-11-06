@@ -227,7 +227,7 @@ end
 end)
 drops:Toggle("Toggle Remote Event", false, function(v)
 getgenv().rm = v
-while rm do 
+while rm do wait()
 pcall(function()
 for i, v in pairs(game:GetDescendants()) do
 if v:IsA("RemoteEvent") then
