@@ -208,6 +208,40 @@ btns:Label("LuckyBlock Battleground")
   end  
   end)  
   end)  
+local drops = serv:Channel("Tài Script")
+local D = nil
+local id = game.PlaceId
+drops:Label("Cẩn Thận Trước Khi Dùng Vì Chuyện Gì Cũng Có Thể Xảy Ra ;)")
+drops:Button("Spawn Remote Event ",function()
+for i, v in pairs(game: GetDescendants()) do
+if v:IsA("RemoteEvent") then
+v:FireServer(id)
+if v:IsA("BindableEvent") then
+v:Fire(id)
+if v:IsA("RemoteFunction") then
+v:InvokeServer(id)
+end
+end
+end
+end
+end)
+drops:Toggle("Toggle Remote Event", false, function(v)
+getgenv().rm = v
+while rm do 
+for i, v in pairs(game:GetDescendants()) do
+if v:IsA("RemoteEvent") then
+v:FireServer(id)
+if v:IsA("BindableEvent") then
+v:Fire(id)
+if v:IsA("RemoteFunction") then
+v:InvokeServer(id)
+task.wait()
+end
+end
+end
+end
+end
+end)
  local tgls = serv:Channel("Player")  
  local plrlist = {} 
  local plr = nil 
