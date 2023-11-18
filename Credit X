@@ -623,7 +623,7 @@ end)
   sldr:Change(10)  
   end)  
   
-  local btns = serv:Channel("Morea Script") 
+  local btns = serv:Channel("More Script") 
  btns:Label("Cre Hub:Grabiel Ynu") 
 btns:Textbox("Bug Report", "Type!", true, function(t)
 if t then
