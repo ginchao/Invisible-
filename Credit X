@@ -228,7 +228,6 @@ getgenv().Thinh = v
 while Thinh do task.wait()
 for i, c in pairs(game:GetService("Workspace"):GetDescendants()) do
 if c:FindFirstChild("HumanoidRootPart") then
-print(c.Parent)
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v:IsA("Tool") then
 local args = {
