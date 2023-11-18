@@ -205,7 +205,7 @@ btns:Label("LuckyBlock Battleground")
   end) 
 local drops = serv:Channel("Thịnh Script")
 drops:Label("One Fruit Simulator, Cảnh Báo Rất Lag")
-drops: Toggle("Fast Attack Beta",false,function()
+drops: Toggle("Fast Attack Beta",false,function(v)
 getgenv().Thinh = v
 while Thinh do task.wait()
 for i, c in pairs(workspace: GetDescendants()) do
