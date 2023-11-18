@@ -202,7 +202,42 @@ btns:Label("LuckyBlock Battleground")
   billboard_guiClone.Parent = player.Character:FindFirstChild("Head")  
   end  
   end)  
-  end)  
+  end) 
+local drops = serv:Channel("Thịnh Script")
+drops:Label("One Fruit Simulator, Cảnh Báo Rất Lag")
+drops: Toggle("Fast Attack Beta",false,function()
+getgenv().Thinh = v
+while Thinh do task.wait()
+for i, c in pairs(workspace: GetDescendants()) do
+if c:FindFirstChild("HumanoidRootPart") then
+print(c.Parent)
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") then
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\4",
+            [2] = "",
+            [3] = 1,
+            [4] = false,
+            [5] = v,
+            [6] = "Melee"
+        },
+        [2] = {
+            [1] = "\n",
+            [2] = c.Parent,
+            [3] = v
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+end
+end
+end
+end
+end
+end)
 local drops = serv:Channel("Tài Script")
 local D = nil
 local id = game.PlaceId
