@@ -204,7 +204,25 @@ btns:Label("LuckyBlock Battleground")
   end)  
   end) 
 local drops = serv:Channel("Thịnh Script")
-drops:Label("One Fruit Simulator, Cảnh Báo Rất Lag")
+local che = {}
+local chest = nil
+for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+if v:FindFirstChild("Baixo") then
+table.insert(che,v.Name)
+end
+end
+local drop = drops:Dropdown("Teleport To Chest, Cảnh Báo Không Nên Tele Liên Tục", che ,function(b)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[b].Baixo.Moldura.CFrame
+end)
+drops:Button("Refresh Chest",function()
+drop:Clear()
+for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+if v:FindFirstChild("Baixo") then
+drop:Add(v.Name)
+end
+end
+end)
+drops:Label("One Fruit Simulator, Cảnh Báo Rất Lag------------")
 drops:Toggle("Fast Attack Beta",false,function(v)
 getgenv().Thinh = v
 while Thinh do task.wait()
