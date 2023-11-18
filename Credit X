@@ -205,10 +205,10 @@ btns:Label("LuckyBlock Battleground")
   end) 
 local drops = serv:Channel("Thịnh Script")
 drops:Label("One Fruit Simulator, Cảnh Báo Rất Lag")
-drops: Toggle("Fast Attack Beta",false,function(v)
+drops:Toggle("Fast Attack Beta",false,function(v)
 getgenv().Thinh = v
 while Thinh do task.wait()
-for i, c in pairs(workspace: GetDescendants()) do
+for i, c in pairs(game:GetService("Workspace"):GetDescendants()) do
 if c:FindFirstChild("HumanoidRootPart") then
 print(c.Parent)
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
@@ -217,7 +217,7 @@ local args = {
     [1] = {
         [1] = {
             [1] = "\4",
-            [2] = "",
+            [2] = "Combat",
             [3] = 1,
             [4] = false,
             [5] = v,
