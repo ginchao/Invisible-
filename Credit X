@@ -203,7 +203,7 @@ btns:Label("LuckyBlock Battleground")
   end  
   end)  
   end) 
-local drops = serv:Channel("Thịnh Script")
+local drops = serv:Channel("Test Script 1")
 local che = {}
 local chest = nil
 for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
@@ -222,7 +222,7 @@ drop:Add(v.Name)
 end
 end
 end)
-drops:Label("One Fruit Simulator, Cảnh Báo Rất Lag------------")
+drops:Label("One Fruit Simulator, Warning Lagged------------")
 drops:Toggle("Fast Attack Beta",false,function(v)
 getgenv().Thinh = v
 while Thinh do task.wait()
@@ -255,10 +255,10 @@ end
 end
 end
 end)
-local drops = serv:Channel("Tài Script")
+local drops = serv:Channel("RemoteEvent Script")
 local D = nil
 local id = game.PlaceId
-drops:Label("Cẩn Thận Trước Khi Dùng Vì Chuyện Gì Cũng Có Thể Xảy Ra ;)")
+drops:Label("Becareful before Using ;)")
 drops:Button("Spawn Remote Event ",function()
 for i, v in pairs(game: GetDescendants()) do
 if v:IsA("RemoteEvent") then
