@@ -222,12 +222,12 @@ drop:Add(v.Name)
 end
 end
 end)
-drops:Label("One Fruit Simulator, Warning Lagged------------")
+drops:Label("One Fruit Simulator, Fix Lag-----------")
 drops:Toggle("Fast Attack Beta",false,function(v)
 getgenv().Thinh = v
 while Thinh do task.wait()
-for i, c in pairs(game:GetService("Workspace"):GetDescendants()) do
-if c:FindFirstChild("HumanoidRootPart") then
+for i, c in pairs(game:GetService("Workspace").__GAME.__Mobs:GetDescendants()) do
+if c:FindFirstChild("Humanoid") then
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v:IsA("Tool") then
 local args = {
