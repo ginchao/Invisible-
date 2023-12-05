@@ -98,6 +98,21 @@ btns:Label("LuckyBlock Battleground")
  end) 
  end 
  end) 
+tgls:Toggle("Kill Aura LAG",false,function(v)
+getgenv().killaura = v
+while aura do wait() 
+for i, v in pairs(workspace: GetDescendants()) do
+if v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Name and v.Humanoid.Health > 0 then
+pcall(function()
+v.Humanoid.Health = 0
+v.HumanoidRootPart.CanCollide = false
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
+task.wait(.1)
+end)
+end
+end
+end
+end)
  tgls:Toggle("Auto Equip All", false, function(v) 
  local plrmain = game.Players.LocalPlayer 
  getgenv().equiptools = v 
