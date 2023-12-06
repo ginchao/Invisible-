@@ -42,17 +42,25 @@ btns:Label("LuckyBlock Battleground")
   tps:Teleport("662417684")  
   end) 
   local tgls = serv:Channel("Main")  
-tgls:Toggle("Kill Aura LAG",false,function(v)
-getgenv().killaura = v
-while killaura do wait() 
+local dis = nil
+tgls:Textbox("Distance aura","type",true,function(v)
+dis = v
+end)
+tgls:Toggle("zz",false,function(t)
+getgenv().auto= t
+while auto do wait(.1)
+if dis ~= nil then
+print(dis)
 for i, v in pairs(workspace: GetDescendants()) do
-if v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Name and v.Humanoid.Health > 0 then
+if v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Name and v.Humanoid.Health > 0 and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < math.abs(dis) then
 pcall(function()
+repeat wait(.2)
 v.Humanoid.Health = 0
 v.HumanoidRootPart.CanCollide = false
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
-task.wait(.1)
+until v.Humanoid.Health <= 0 or auto == false
 end)
+end
 end
 end
 end
