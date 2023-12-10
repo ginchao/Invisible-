@@ -46,7 +46,7 @@ local dis = nil
 drops:Textbox("Distance aura","type",true,function(v)
 dis = v
 end)
-drops:Toggle("Kill Aura For Raid",false,function(t)
+drops:Toggle("Kill Aura Humanoid",false,function(t)
 getgenv().aura= t
 if dis == nil then
 DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok") 
@@ -66,6 +66,7 @@ end
 end
 end
 end)
+drops:Seperator()
  drops:Toggle("Grabtools",false, function(I) 
  getgenv().autograb = I 
  spawn(function() 
