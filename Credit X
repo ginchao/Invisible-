@@ -52,11 +52,10 @@ if dis == nil then
 DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok") 
 else
 while aura do wait(.1)
-print(dis)
 for i, v in pairs(game:GeService("Workspace"): GetDescendants()) do
-if v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Name and v.Humanoid.Health > 0 and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < math.abs(dis) then
+if v:FindFirstChild("Humanoid") and v.Name ~= game.Players.LocalPlayer.Name and v.Humanoid.Health > 0 and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude <= math.random(dis) then
 pcall(function()
-repeat wait(.2)
+repeat wait()
 v.Humanoid.Health = 0
 v.HumanoidRootPart.CanCollide = false
 sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
