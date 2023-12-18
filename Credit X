@@ -342,7 +342,7 @@ end)
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame  
  end 
   end)  
-drops:Toggle("Lookat Player",false,function(v)
+tgls:Toggle("Lookat Player",false,function(v)
 if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Spectate, Need Loadmap", "Ok") 
  else
