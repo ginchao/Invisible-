@@ -280,42 +280,7 @@ end
 end
 end
 end)
-local drops = serv:Channel("RemoteEvent Script")
-local D = nil
-local id = game.PlaceId
-drops:Label("Becareful before Using ;)")
-drops:Button("Spawn Remote Event ",function()
-for i, v in pairs(game: GetDescendants()) do
-if v:IsA("RemoteEvent") then
-v:FireServer(id)
-if v:IsA("BindableEvent") then
-v:Fire(id)
-if v:IsA("RemoteFunction") then
-v:InvokeServer(id)
-end
-end
-end
-end
-end)
-drops:Toggle("Toggle Remote Event", false, function(v)
-getgenv().rm = v
-while rm do wait()
-pcall(function()
-for i, v in pairs(game:GetDescendants()) do
-if v:IsA("RemoteEvent") then
-v:FireServer(id)
-if v:IsA("BindableEvent") then
-v:Fire(id)
-if v:IsA("RemoteFunction") then
-v:InvokeServer(id)
-task.wait()
-end
-end
-end
-end
-end)
-end
-end)
+
  local tgls = serv:Channel("Player")  
  local plrlist = {} 
  local plr = nil 
