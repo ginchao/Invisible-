@@ -149,7 +149,7 @@ drops:Seperator()
   end  
   end  
   end  
-  Noclipping = game.RunService.Stepped:Connect(NoclipLoop)  
+  Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop)  
   if not getgenv().Clip then Noclipping:Disconnect() end  
   end) 
   drops:Toggle("EspName",false, function(v)  
@@ -347,7 +347,7 @@ if plr == nil then
  DiscordLib:Notification("Warning", "Choose Player to Spectate, Need Loadmap", "Ok") 
  else
 getgenv().look = v
-game.RunService.RenderStepped:Connect(function()
+game:GetService("RunService").RenderStepped:Connect(function()
 if getgenv().look then 
 workspace.CurrentCamera.CFrame = CFrame.new(workspace.CurrentCamera.CFrame.p, game.Players[plr].Character.Head.CFrame.p)
 end
@@ -397,7 +397,7 @@ end)
 getgenv().autele = t
 if v2 then a:Disconnect() end
 if autele ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
 if autele == false then v2:Disconnect() end game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6) wait()  
   end)  
   end  
@@ -411,7 +411,7 @@ if autele == false then v2:Disconnect() end game.Players.LocalPlayer.Character.H
 getgenv().bri = a
 if v2 then a:Disconnect() end
 if bri ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
 if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait()  
   end)  
  end 
@@ -440,7 +440,7 @@ if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRoo
 getgenv().brin = t
 if v2 then a:Disconnect() end
 if brin ~= v2 then
-v2 = game.RunService.RenderStepped:Connect(function()
+v2 = game:GetService("RunService").RenderStepped:Connect(function()
 if brin == false then v2:Disconnect() end
  for i, v in pairs(game.Players:GetChildren()) do 
  local ok = game.Players.LocalPlayer.Name 
