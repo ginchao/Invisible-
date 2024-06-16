@@ -273,7 +273,8 @@ DiscordLib:Notification(dit.Name.." | "..dit.DisplayName,"Số Ngày Tạo Acc: 
 setclipboard(dit.Name.." | "..dit.DisplayName.." | Số Ngày Tạo Acc: "..dit.AccountAge.." | Userid: "..dit.UserId)
 end)
 drops:Button("Copy Script Server",function()
-setclipboard("game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,""..game.JobId.."",game.Players.LocalPlayer)")
+setclipboard("game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId,' "..game.JobId.." ',game.Players.LocalPlayer)")
+DiscordLib:Notification("Copy Script Thành Công","Khi Thoát Ra Và Nhập Lại Script Này Vẫn Có Thể Quay Lại Server Đã Copy","Ok")
 end)
 local drops = serv:Channel("Test Script 1")
 local che = {}
