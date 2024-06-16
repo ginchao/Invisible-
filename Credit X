@@ -374,12 +374,29 @@ end)
  end 
  end 
  end) 
- tgls:Button("Refresh Player", function() 
- drop:Clear() 
- for i, v in pairs(game.Players:GetChildren()) do 
- drop:Add(v.Name) 
- end 
- end) 
+local function up()
+local ckpl = {}
+local plr = nil
+for i, v in pairs(game.Players:GetPlayers()) do
+table.insert(ckpl,v.Name)
+end
+return ckpl
+end
+local ck = tgls:Dropdown("Xem Inventory",up(),function(y)
+plr = y
+end)
+local function rf()
+local newrf = up()
+ck:Clear(up())
+for i, v in pairs(game.Players:GetPlayers()) do
+ck:Add(v.Name)
+end
+end
+spawn(function()
+while wait(5) do
+rf()
+end
+end)
  tgls:Button("Teleport To Player", function()  
  if plr == nil then 
  DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok") 
