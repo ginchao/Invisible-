@@ -263,6 +263,7 @@ end)
 drops:Button("Xem Inventory",function()
 if rfp == nil then
 DiscordLib:Notification("Thông Báo","Vui Lòng Chọn Người","Ok")
+else
 for i, v in pairs(game.Players[rfp].Backpack: GetChildren()) do
 if v:IsA("Tool") and v.Parent then
 No.New("🔴 "..v.Name,3)
@@ -279,6 +280,7 @@ end)
 drops:Button("Xem Thông tin",function()
 if rfp == nil then
 DiscordLib:Notification("Thông Báo","Vui Lòng Chọn Người","Ok")
+else
 local dit = game.Players[rfp]
 DiscordLib:Notification(dit.Name.." | "..dit.DisplayName,"Số Ngày Tạo Acc: "..dit.AccountAge.." | Userid: "..dit.UserId,"Copy Thông tin")
 setclipboard(dit.Name.." | "..dit.DisplayName.." | Số Ngày Tạo Acc: "..dit.AccountAge.." | Userid: "..dit.UserId)
@@ -382,18 +384,6 @@ end)
 end
 end)
  local tgls = serv:Channel("Player")  
- local plrlist = {} 
- local plr = nil 
- for i, v in pairs(game:GetService("Players"):GetChildren()) do 
- table.insert(plrlist,v.Name) 
- end 
- local drop = tgls:Dropdown("Choose Player", plrlist, function(m) 
- for i, b in pairs(game:GetService("Players"):GetPlayers()) do 
- if m == b.name then 
- plr = m 
- end 
- end 
- end) 
 local function up()
 local ckpl = {}
 local plr = nil
@@ -407,7 +397,7 @@ plr = y
 end)
 local function rf()
 local newrf = up()
-ck:Clear(up())
+ck:Clear(newrf)
 for i, v in pairs(game.Players:GetPlayers()) do
 ck:Add(v.Name)
 end
