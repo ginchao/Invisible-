@@ -1,4 +1,4 @@
-
+local No = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Hoclomcongthuc/main/noitification%20"))()
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("Test Hubs") 
 local per = game.Players.LocalPlayer.Name 
