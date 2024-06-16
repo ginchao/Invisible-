@@ -228,6 +228,51 @@ drops:Seperator()
   end  
   end)  
   end) 
+local drops = serv:Channel("New❗")
+local function up()
+local ckpl = {}
+local rfp = nil
+for i, v in pairs(game.Players:GetPlayers()) do
+table.insert(ckpl,v.Name)
+end
+return ckpl
+end
+local ck = drops:Dropdown("Xem Inventory",up(),function(y)
+rfp = y
+print(y)
+end)
+local function rf()
+local newrf = up()
+ck:Clear(up())
+for i, v in pairs(game.Players:GetPlayers()) do
+ck:Add(v.Name)
+end
+end
+spawn(function()
+while wait(5) do
+rf()
+end
+end)
+
+drops:Button("Xem Inventory",function()
+for i, v in pairs(game.Players[rfp].Backpack: GetChildren()) do
+if v:IsA("Tool") and v.Parent then
+No.New("🔴 "..v.Name,3)
+print("🔴 "..v.Name)
+local hd = game.Players[rfp].Character:FindFirstChildWhichIsA("Tool")
+if hd then
+No.New("🟢 "..hd.Name,3)
+print("🟢"..hd.Name)
+end
+end
+end
+end)
+drops:Button("Xem Thông tin",function()
+local dit = game.Players[rfp]
+DiscordLib:Notification(dit.Name.." | "..dit.DisplayName,"Số Ngày Tạo Acc: "..dit.AccountAge.." | Userid: "..dit.UserId,"Copy Thông tin")
+setclipboard(dit.Name.." | "..dit.DisplayName.." | Số Ngày Tạo Acc: "..dit.AccountAge.." | Userid: "..dit.UserId)
+end)
+
 local drops = serv:Channel("Test Script 1")
 local che = {}
 local chest = nil
