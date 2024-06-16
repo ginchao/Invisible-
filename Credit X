@@ -1,6 +1,6 @@
 local No = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Hoclomcongthuc/main/noitification%20"))()
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
-  local win = DiscordLib:Window("Test Hubs") 
+  local win = DiscordLib:Window("Test Hubs | "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name) 
 local per = game.Players.LocalPlayer.Name 
   DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub","Ok")  
   local serv = win:Server("Universal", "rbxassetid://4483345998")  
@@ -272,7 +272,9 @@ local dit = game.Players[rfp]
 DiscordLib:Notification(dit.Name.." | "..dit.DisplayName,"Số Ngày Tạo Acc: "..dit.AccountAge.." | Userid: "..dit.UserId,"Copy Thông tin")
 setclipboard(dit.Name.." | "..dit.DisplayName.." | Số Ngày Tạo Acc: "..dit.AccountAge.." | Userid: "..dit.UserId)
 end)
-
+drops:Button("Copy Script Server",function()
+No.New(
+end)
 local drops = serv:Channel("Test Script 1")
 local che = {}
 local chest = nil
