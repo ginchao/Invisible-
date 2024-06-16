@@ -265,15 +265,15 @@ if rfp == nil then
 DiscordLib:Notification("Thông Báo","Vui Lòng Chọn Người","Ok")
 else
 for i, v in pairs(game.Players[rfp].Backpack: GetChildren()) do
-if v:IsA("Tool") and v.Parent then
+if v:IsA("Tool")  then
 No.New("🔴 "..v.Name,3)
 print("🔴 "..v.Name)
+end
+end
 local hd = game.Players[rfp].Character:FindFirstChildWhichIsA("Tool")
 if hd then
 No.New("🟢 "..hd.Name,3)
 print("🟢"..hd.Name)
-end
-end
 end
 end
 end)
