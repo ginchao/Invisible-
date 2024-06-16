@@ -294,7 +294,7 @@ game.StarterGui:SetCore("SendNotification", {
                  Title = "TestHub", 
                  Text = "Khi Thoát Ra Và Nhập Lại Script Này Vẫn Có Thể Quay Lại Server Đã Copy",
                  Icon = gay[math.random(1,#gay)], 
-                 Duration = 2.5
+                 Duration = 10
              })  
 end)
 local drops = serv:Channel("Test Script 1")
