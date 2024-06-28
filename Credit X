@@ -235,7 +235,7 @@ drops:Seperator()
   end  
   end)  
   end) 
-local drops = serv:Channel("New❗")
+local drops = serv:Channel("New❕")
 local function up()
 local ckpl = {}
 local rfp = nil
@@ -296,6 +296,21 @@ game.StarterGui:SetCore("SendNotification", {
                  Icon = gay[math.random(1,#gay)], 
                  Duration = 10
              })  
+end)
+drops:Textbox("❕ID Nhạc", "Nhập!", true, function(t)
+local SoundId = t
+local Sound = Instance.new("Sound")
+Sound.Name = "testhubsound"
+Sound.SoundId = "rbxassetid://" .. SoundId
+Sound.Parent = game.Workspace
+Sound:Play()
+end)
+drops:Button("❕Tắt Nhạc", function()
+for i, v in pairs(game.Workspace: GetChildren()) do
+if v:IsA("Sound") and v.Name == "testhubsound" then 
+v:Destroy()
+end
+end
 end)
 local drops = serv:Channel("Test Script 1")
 local che = {}
