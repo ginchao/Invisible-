@@ -235,7 +235,7 @@ drops:Seperator()
   end  
   end)  
   end) 
-local drops = serv:Channel("New❕")
+local drops = serv:Channel("New❔")
 local function up()
 local ckpl = {}
 local rfp = nil
@@ -297,7 +297,7 @@ game.StarterGui:SetCore("SendNotification", {
                  Duration = 10
              })  
 end)
-drops:Textbox("❕ID Nhạc", "Nhập!", true, function(t)
+drops:Textbox("ID Nhạc", "Nhập!", true, function(t)
 local SoundId = t
 local Sound = Instance.new("Sound")
 Sound.Name = "testhubsound"
@@ -305,12 +305,40 @@ Sound.SoundId = "rbxassetid://" .. SoundId
 Sound.Parent = game.Workspace
 Sound:Play()
 end)
-drops:Button("❕Tắt Nhạc", function()
+drops:Button("Tắt Nhạc", function()
 for i, v in pairs(game.Workspace: GetChildren()) do
 if v:IsA("Sound") and v.Name == "testhubsound" then 
 v:Destroy()
 end
 end
+end)
+drops:Textbox("Mã Hoá Đơn Giản", "Type here!", true, function(V)
+
+local throw_away = {}
+
+local SCRIPT_TO_OBFUSCATE = V
+
+function GetBytes()
+	for num = 1, #SCRIPT_TO_OBFUSCATE do
+		throw_away[num] = string.byte(SCRIPT_TO_OBFUSCATE, num)
+	end
+end
+
+function ConvertString()
+	local string_buffer = "";
+	for obj = 1, #throw_away do
+		string_buffer = string_buffer .. "\\" .. throw_away[obj]
+	end
+	return string_buffer
+end
+
+function Obfuscate()
+	GetBytes()
+	local str = ConvertString()
+	return setclipboard('loadstring("' .. str .. '")()')
+end
+DiscordLib:Notification("Thông Báo","Đã Mã Hoá Văn Bản Và Lưu Vào Bộ Nhớ Tạm","Ok")
+Obfuscate()
 end)
 local drops = serv:Channel("Test Script 1")
 local che = {}
