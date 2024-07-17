@@ -238,7 +238,7 @@ drops:Seperator()
 local drops = serv:Channel("Meme Sea")
 drops:Label("Auto Skill Quái↓")
 drops:Toggle("Auto Skill Z",false,function(z)
-getgenv().autoskillZ = Z
+getgenv().autoskillZ = z
 while autoskillZ do wait()
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v:IsA("Tool") then
