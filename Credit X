@@ -591,7 +591,7 @@ local id = game.PlaceId
 drops:Label("Becareful before Using ;)")
 drops:Button("Spawn Remote Event ",function()
 for i, v in pairs(game: GetDescendants()) do
-if v:IsA("RemoteEvent") and v.Name ~= "Eat" or v.Name ~= "SavingEvent" then
+if v:IsA("RemoteEvent") and v.Name ~= "Eat" then
 v:FireServer(id)
 if v:IsA("BindableEvent") then
 v:Fire(id)
