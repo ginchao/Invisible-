@@ -320,7 +320,7 @@ while autoskillZp do wait()
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v:IsA("Tool") then
 for i, c in pairs(game.Players:GetPlayers()) do
-if c.Character: FindFirstChild("HumanoidRootPart") and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
+if c.Character: FindFirstChild("HumanoidRootPart") and c.Name ~= game.Players.LocalPlayer.Name and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "Z",[4] = "Hold"} wait()
 game:GetService("ReplicatedStorage").OtherEvent.SkillEvents.Server_Skills:FireServer(unpack(args))
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "Z",[4] = "Release",[5] = {["Hit_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new(),["Mouse_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new()}}
@@ -339,7 +339,7 @@ while autoskillXp do wait()
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v:IsA("Tool") then
 for i, c in pairs(game.Players:GetPlayers()) do
-if c.Character: FindFirstChild("HumanoidRootPart") and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
+if c.Character: FindFirstChild("HumanoidRootPart") and c.Name ~= game.Players.LocalPlayer.Name and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "X",[4] = "Hold"} wait()
 game:GetService("ReplicatedStorage").OtherEvent.SkillEvents.Server_Skills:FireServer(unpack(args))
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "X",[4] = "Release",[5] = {["Hit_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new(),["Mouse_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new()}}
@@ -358,7 +358,7 @@ while autoskillCp do wait()
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v:IsA("Tool") then
 for i, c in pairs(game.Players:GetPlayers()) do
-if c.Character: FindFirstChild("HumanoidRootPart") and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
+if c.Character: FindFirstChild("HumanoidRootPart") and c.Name ~= game.Players.LocalPlayer.Name and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "C",[4] = "Hold"} wait()
 game:GetService("ReplicatedStorage").OtherEvent.SkillEvents.Server_Skills:FireServer(unpack(args))
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "C",[4] = "Release",[5] = {["Hit_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new(),["Mouse_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new()}}
@@ -377,7 +377,7 @@ while autoskillVp do wait()
 for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v:IsA("Tool") then
 for i, c in pairs(game.Players:GetPlayers()) do
-if c.Character: FindFirstChild("HumanoidRootPart") and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
+if c.Character: FindFirstChild("HumanoidRootPart") and c.Name ~= game.Players.LocalPlayer.Name and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.Character.HumanoidRootPart.Position).Magnitude <= 300 and c.Character:WaitForChild("Humanoid").Health > 0 then
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "V",[4] = "Hold"} wait()
 game:GetService("ReplicatedStorage").OtherEvent.SkillEvents.Server_Skills:FireServer(unpack(args))
 local args = {[1] = game:GetService("Players").LocalPlayer.Character,[2] = v.Name,[3] = "V",[4] = "Release",[5] = {["Hit_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new(),["Mouse_Position"] = c.Character.HumanoidRootPart.Position + Vector3.new()}}
