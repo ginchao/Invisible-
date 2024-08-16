@@ -8,8 +8,8 @@ end
 if game:GetService("CoreGui"):FindFirstChild("SyxHubSEXHOD") then
         game:GetService("CoreGui"):FindFirstChild("SyxHubSEXHOD"):Destroy()
 end
-
 --Skid
+
 local SyxHubSEXHOD = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -23,7 +23,8 @@ SyxHubSEXHOD.Parent = game:GetService("CoreGui")
 SyxHubSEXHOD.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = SyxHubSEXHOD
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.5
 Frame.Position = UDim2.new(0.0811865702, 0, 0.154321, 0)
 Frame.Size = UDim2.new(0.0921155363, 0, 0.118518516, 0)
 
@@ -34,10 +35,11 @@ UIAspectRatioConstraint.AspectRatio = 1.229
 
 ImageButton.Parent = Frame
 ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BackgroundTransparency = 0.5
 ImageButton.Position = UDim2.new(0.135593221, 0, 0.114583328, 0)
 ImageButton.Size = UDim2.new(0.720339, 0, 0.760416687, 0)
 ImageButton.Image = "http://www.roblox.com/asset/?id=11842149042"
-   
+
 ImageButton.MouseButton1Click:Connect(function ()
 local ui = game:GetService("CoreGui").RobloxGui.Modules.Server.ServerPlayer:FindFirstChild("Discord")
         ui.Enabled = not ui.Enabled 
