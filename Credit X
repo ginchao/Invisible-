@@ -5,6 +5,47 @@ local Anh_Gai_Alimi = {"rbxassetid://6942501524","rbxassetid://7903531742","rbxa
 }
 return Anh_Gai_Alimi
 end
+if game:GetService("CoreGui"):FindFirstChild("Discord") then
+        game:GetService("CoreGui"):FindFirstChild("Discord"):Destroy()
+end
+
+if game:GetService("CoreGui"):FindFirstChild("SyxHubSEXHOD") then
+        game:GetService("CoreGui"):FindFirstChild("SyxHubSEXHOD"):Destroy()
+end
+
+--Skid
+local SyxHubSEXHOD = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+
+
+SyxHubSEXHOD.Name = "SyxHubSEXHOD"
+SyxHubSEXHOD.Parent = game:GetService("CoreGui")
+SyxHubSEXHOD.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = SyxHubSEXHOD
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+Frame.Position = UDim2.new(0.0811865702, 0, 0.154321, 0)
+Frame.Size = UDim2.new(0.0921155363, 0, 0.118518516, 0)
+
+UICorner.Parent = Frame
+
+UIAspectRatioConstraint.Parent = Frame
+UIAspectRatioConstraint.AspectRatio = 1.229
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.Position = UDim2.new(0.135593221, 0, 0.114583328, 0)
+ImageButton.Size = UDim2.new(0.720339, 0, 0.760416687, 0)
+ImageButton.Image = "http://www.roblox.com/asset/?id=11842149042"
+
+ImageButton.MouseButton1Click:Connect(function ()
+        game.CoreGui:FindFirstChild("Discord").Enabled = not game.CoreGui:FindFirstChild("Discord").Enabled 
+end)
+local lp = Players.LocalPlayer
 local No = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Hoclomcongthuc/main/noitification%20"))()
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/New'))()  
   local win = DiscordLib:Window("Test Hubs | "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name) 
@@ -48,6 +89,35 @@ btns:Label("LuckyBlock Battleground")
   DiscordLib:Notification("Wait a Sec","Teleport To Place...","...")  
   tps:Teleport("662417684")  
   end) 
+
+  local drops = serv:Channel("⭐Script")  
+drops:Seperator() 
+drops:Toggle("Hide Button Open/Close Ui",false,function(t)
+game:GetService("CoreGui").SyxHubSEXHOD.Frame.Visible = t
+end)
+drops:Button("Synapse X [ PE Delta ]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/syn_ui_new.lua"))()
+end)
+drops:Button("Codex [ PE ]", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Codex.lua"))()
+end)
+drops:Button("Kiwi [ PE ]", function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kiwi-Ui.lua"))()
+end)
+drops:Button("Krypton [ PE ]", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Krypton.lua"))()
+end)
+drops:Button("Krnl [ PE ]", function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Knrl.lua"))()
+end)
+drops:Button("Animation [ PE ]", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/EGEGESGGH/main/FE%20Animation%20GUI.txt'))()
+end)
+drops:Button("Hydroxide", function()
+    local owner = "Upbolt"
+    local branch = "revision"
+    local function webImport(file)
+        return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+    end
+    webImport("init")
+    webImport("ui/main")
+end)
+
   local drops = serv:Channel("Main")  
 local dis = nil
 drops:Textbox("Distance aura","type",true,function(v)
