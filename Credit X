@@ -88,24 +88,111 @@ btns:Label("LuckyBlock Battleground")
   tps:Teleport("662417684")  
   end) 
 
-  local drops = serv:Channel("⭐Script")  
+  local drops = serv:Channel("⭐Script+Tắt Ui")  
 drops:Seperator() 
 drops:Toggle("Hide Button Open/Close Ui",false,function(t)
 game:GetService("CoreGui").SyxHubSEXHOD.Frame.Visible = t
 end)
-drops:Button("Synapse X [ PE Delta ]", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/syn_ui_new.lua"))()
+drops:Button("Synapse X [ PE Delta ]", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/syn_ui_new.lua"))()
 end)
-drops:Button("Codex [ PE ]", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Codex.lua"))()
+drops:Button("Codex [ PE ]", function()    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Codex.lua"))()
 end)
-drops:Button("Kiwi [ PE ]", function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kiwi-Ui.lua"))()
+drops:Button("Kiwi [ PE ]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kiwi-Ui.lua"))()
 end)
-drops:Button("Krypton [ PE ]", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Krypton.lua"))()
+
+drops:Button("Krypton [ PE ]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Krypton.lua"))()
 end)
-drops:Button("Krnl [ PE ]", function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Knrl.lua"))()
+
+drops:Button("Krnl [ PE ]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Knrl.lua"))()
 end)
-drops:Button("Animation [ PE ]", function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/EGEGESGGH/main/FE%20Animation%20GUI.txt'))()
+
+drops:Button("Animation [ PE ]", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/EGEGESGGH/main/FE%20Animation%20GUI.txt'))()
 end)
+
+drops:Button("Arceus x [ PE ]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Arceus_X_V3.lua"))()
+end)
+
+drops:Button("Execute | Ui Library [ PE ]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Execute%20%7C%20UI%20Library.lua"))()
+end)
+
+drops:Button("Kill Player [ PE ]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kill%20player"))()
+end)
+
+drops:Button("Keyboard", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+drops:Button("Rejoin Gui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Rejoin.lua"))()
+end)
+
+drops:Button("Inf yield Delta", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/lxnnydev/c533c374ca4c1dcef4e1e10e33fa4a0c/raw/03e74f184f801dad77d3ebe1e2f18c6ac87ca612/delta___IY.gistfile1.txt.lua", true))()
+end)
+
+drops:Button("Inf yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source', true))()
+end)
+
+drops:Button("Hitbox", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA"))()
+end)
+
+drops:Button("Slap battles new R2O", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cheesynob39/R2O/main/Games/6403373529.lua"))()
+end)
+
+drops:Button("Auto Farm Bob", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/File/Farm%20Bob.lua"))()
+end)
+
+drops:Button("CherryUi's SB GUI", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomScriptr3/gggggggg/main/lolez.txt", true))()
+end)
+
+drops:Button("Position Gui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Position_Gui.lua", true))()
+end)
+
+drops:Button("Fe Fly V3", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Fly_V3.lua"))()
+end)
+
+drops:Button("MoonUI v10", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/MoonUI-v10-/main/MoonUI%20v10'))()
+end)
+
+drops:Button("Btool Cute", function()
+    loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+end)
+
+drops:Button("Dex V2", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+end)
+
+drops:Button("Dex V3", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
+
+drops:Button("TP gui player", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/TP_Player.lua"))()
+end)
+
+drops:Button("Turies Spy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Reamsrpy.lua", true))()
+end)
+
+drops:Button("Simple Spy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/RemoteSpy-V2.lua", true))()
+end)
+
 drops:Button("Hydroxide", function()
     local owner = "Upbolt"
     local branch = "revision"
@@ -115,6 +202,7 @@ drops:Button("Hydroxide", function()
     webImport("init")
     webImport("ui/main")
 end)
+
 
   local drops = serv:Channel("Main")  
 local dis = nil
