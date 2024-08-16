@@ -38,7 +38,7 @@ ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BackgroundTransparency = 0.5
 ImageButton.Position = UDim2.new(0.135593221, 0, 0.114583328, 0)
 ImageButton.Size = UDim2.new(0.720339, 0, 0.760416687, 0)
-ImageButton.Image = "http://www.roblox.com/asset/?id=11842149042"
+ImageButton.Image = ""
 
 ImageButton.MouseButton1Click:Connect(function ()
 local ui = game:GetService("CoreGui").RobloxGui.Modules.Server.ServerPlayer:FindFirstChild("Discord")
