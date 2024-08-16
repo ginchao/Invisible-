@@ -44,7 +44,7 @@ local ui = game:GetService("CoreGui").RobloxGui.Modules.Server.ServerPlayer:Find
 end)
 local lp = Players.LocalPlayer
 local No = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Hoclomcongthuc/main/noitification%20"))()
-local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/New'))()  
+local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("Test Hubs | "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name) 
 local per = game.Players.LocalPlayer.Name 
   DiscordLib:Notification("Test Hub","Hello! "..""..per..".                                              ".."Thanks For Using Test Hub","Ok")  
