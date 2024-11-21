@@ -8,7 +8,7 @@ end
 if game:GetService("CoreGui"):FindFirstChild("SyxHubSEXHOD") then
         game:GetService("CoreGui"):FindFirstChild("SyxHubSEXHOD"):Destroy()
 end
---Skid
+--Skid button
 
 local SyxHubSEXHOD = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
